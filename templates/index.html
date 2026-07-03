@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OptiCrop - Smart Agriculture</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-center text-success">🌱 OptiCrop - Crop Recommendation System</h2>
+        <p class="text-center">Enter soil and climate details</p>
+
+        <form action="/predict" method="POST">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <input class="form-control mb-3" type="text" name="N" placeholder="Nitrogen (N)" required>
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control mb-3" type="text" name="P" placeholder="Phosphorous (P)" required>
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control mb-3" type="text" name="K" placeholder="Potassium (K)" required>
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control mb-3" type="text" name="temperature" placeholder="Temperature" required>
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control mb-3" type="text" name="humidity" placeholder="Humidity" required>
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control mb-3" type="text" name="ph" placeholder="pH Level" required>
+                </div>
+
+                <div class="col-md-12">
+                    <input class="form-control mb-3" type="text" name="rainfall" placeholder="Rainfall" required>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-success btn-lg" type="submit">
+                    Predict Crop
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
